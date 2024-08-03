@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maiky Pizza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00963c;
+            color: #00ff00;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: url('pizza-hero.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 2em;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(33% - 20px);
+            margin-bottom: 20px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: #00ff00;
+            color: white;
+        }
+
+        .menu-item p {
+            padding: 10px;
+            margin: 0;
+            color: #83ff7f;
+        }
+
+        footer {
+            background-color: #00ad45;
+            color: #00ff00;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        img {
+            border-radius: 50%;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Custom styling for Dialogflow Messenger */
+        df-messenger {
+            --df-messenger-bot-message: #02491e; /* Black background for bot messages */
+            --df-messenger-button-titlebar-color: #00ff00; /* Green title bar */
+            --df-messenger-chat-background-color: #0c4b0057; /* Black chat background */
+            --df-messenger-font-color: #fdfffc; /* White text */
+            --df-messenger-send-icon: #00ff00; /* Green send icon */
+            --df-messenger-user-message: #04af04; /* Green background for user messages */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maiky Pizza</h1>
+    </header>
+
+    <div class="hero-image">
+        <div class="hero-text">Welcome to Maiky Pizza!</div>
+    </div>
+
+    <div class="container">
+        <section class="menu">
+            <div class="menu-item">
+                <img src="pizza1.jpg" alt="Pizza Margherita">
+                <h3>Pizza Margherita</h3>
+                <p>Classic pizza with tomatoes, mozzarella, and basil.</p>
+            </div>
+            <div class="menu-item">
+                <img src="pizza2.jpg" alt="Pepperoni Pizza">
+                <h3>Pepperoni Pizza</h3>
+                <p>Delicious pizza topped with spicy pepperoni slices.</p>
+            </div>
+            <div class="menu-item">
+                <img src="pizza3.jpg" alt="Vegetarian Pizza">
+                <h3>Vegetarian Pizza</h3>
+                <p>A healthy option with a variety of fresh vegetables.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Maiky Pizza. All rights reserved.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="dino.jpg"
+      chat-title="Maiky_guy"
+      agent-id="2a24c32a-827d-4a97-b7c6-5fce36b5d43b"
+      language-code="en"
+    ></df-messenger>
+</body>
+</html>
