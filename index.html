@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Maiky Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,7 +20,7 @@
         }
 
         .container {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
             padding: 20px;
         }
@@ -46,7 +47,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         .menu-item {
@@ -54,7 +55,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            width: calc(33% - 20px);
+            flex: 1 1 calc(33% - 20px);
             margin-bottom: 20px;
         }
 
@@ -82,9 +83,7 @@
             color: #00ff00;
             text-align: center;
             padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            position: relative;
         }
 
         img {
@@ -102,6 +101,27 @@
             --df-messenger-font-color: #fdfffc; /* White text */
             --df-messenger-send-icon: #00ff00; /* Green send icon */
             --df-messenger-user-message: #04af04; /* Green background for user messages */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 1.5em;
+            }
+
+            .menu-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text {
+                font-size: 1.2em;
+            }
+
+            .menu-item img {
+                height: 150px;
+            }
         }
     </style>
 </head>
